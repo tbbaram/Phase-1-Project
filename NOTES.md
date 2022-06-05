@@ -1,3 +1,7 @@
-## Step 1: Come up with an idea
+## Drink Maker
 
-## Step 2: 
+## Overview
+
+## Features
+
+## How to use
