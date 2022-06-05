@@ -1,8 +1,8 @@
 // NODE Getters
 
-const mainDiv = () => document.getElementById("main")
-
-const homePageLink = () => document.getElementById('home-page-link')
+const mainDiv = () => document.getElementById("main");
+const homePageLink = () => document.getElementById('home-page-link');
+const drinkListLink = () => document.getElementById('drink-list-link')
 
 // Templates
 
@@ -12,15 +12,15 @@ const homePageTemplate = () => {
     `
 }
 
-const mealListTemplate = () => {
-    `
+const drinkListTemplate = () => {
+    return `
     <h1>Drink List</h1>
             <table class="highlight">
                 <thead>
                   <tr>
                       <th>Drink</th>
                       <th>Ingredients</th>
-                      <th>Price</th>
+                      <th>Average Price</th>
                   </tr>
                 </thead>
         
@@ -64,9 +64,17 @@ const homePageLinkEvent = () => {
     })
 }
 
+const drinkListLinkEvent = () => {
+    drinkListLink().addEventListener('click', (e) => {
+        e.preventDefault();
+        renderDrinkListPage();
+    })
+}
+
 // When DOM Loads
 
 document.addEventListener('DOMContentLoaded', () => {
-    //renderHomePage();
+    renderHomePage();
     homePageLinkEvent();
+    drinkListLinkEvent();
 })
