@@ -4,19 +4,19 @@
             "id": 1,
             "drink": "Moscow Mule",
             "ingredients": "1 1/2 oz Vodka, 1/6 oz Lime juice, 4 oz Ginger beer",
-            "average cost": "$10.23"
+            "cost": "$10.23"
             },
         {
             "id": 2,
             "drink": "Mojito",
             "ingredients": "1 1/2 oz White rum, 1 oz Fresh lime juice, 2 teaspoons Sugar, 6 leaves of Mint, Soda Water",
-            "average cost": "Between $6-$14"
+            "cost": "Between $6-$14"
             },
         {
             "id": 3,
             "drink": "Old Fashioned",
             "ingredients": "1 1/2 oz Bourbon or Rye whiskey, 1 Sugar cube, 2 dashes Angostura bitters, Few dashes plain water",
-            "average cost": "$8.95"
+            "cost": "$8.95"
             }
     ]
 }

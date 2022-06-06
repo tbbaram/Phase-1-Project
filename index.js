@@ -1,8 +1,12 @@
+// Globals
+const baseUrl = 'http://localhost:3000';
+let drinks = [];
+
 // NODE Getters
 
 const mainDiv = () => document.getElementById("main");
 const homePageLink = () => document.getElementById('home-page-link');
-const drinkListLink = () => document.getElementById('drink-list-link')
+const drinkListLink = () => document.getElementById('drink-list-link');
 
 // Templates
 
@@ -20,32 +24,31 @@ const drinkListTemplate = () => {
                   <tr>
                       <th>Drink</th>
                       <th>Ingredients</th>
-                      <th>Average Price</th>
+                      <th>Price</th>
                   </tr>
                 </thead>
-        
+
                 <tbody>
-                  <tr>
-                    <td>Moscow Mule</td>
-                    <td>Eclair</td>
-                    <td>$0.87</td>
-                  </tr>
-                  <tr>
-                    <td>Mojito</td>
-                    <td>Jellybean</td>
-                    <td>$3.76</td>
-                  </tr>
-                  <tr>
-                    <td>Old Fashioned</td>
-                    <td>Lollipop</td>
-                    <td>$7.00</td>
-                  </tr>
+                ${renderDrinks()}
                 </tbody>
               </table>
     `
 }
 
+const drinkTemplate = (drink) => {
+    return `
+    <tr>
+        <td>${drink.drink}</td>          
+        <td>${drink.ingredients}</td>
+        <td>${drink.cost}</td>
+    </tr>
+    `
+}
+
 //  Renderers
+const renderDrinks = () => {
+    return drinks.map(drink => drinkTemplate(drink));
+}
 
 const renderHomePage = () => {
     mainDiv().innerHTML = homePageTemplate();
@@ -57,6 +60,12 @@ const renderDrinkListPage = () => {
 
 // Events
 
+const loadDrinks = async () => {
+    const resp = await fetch(baseUrl + '/drinks')
+    const data = await resp.json()
+    drinks = data 
+}
+
 const homePageLinkEvent = () => {
     homePageLink().addEventListener('click', (e) => {
         e.preventDefault();
@@ -65,8 +74,9 @@ const homePageLinkEvent = () => {
 }
 
 const drinkListLinkEvent = () => {
-    drinkListLink().addEventListener('click', (e) => {
+    drinkListLink().addEventListener('click', async (e) => {
         e.preventDefault();
+        await loadDrinks();
         renderDrinkListPage();
     })
 }
