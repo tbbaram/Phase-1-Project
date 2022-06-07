@@ -41,7 +41,7 @@ const drinkTemplate = (drink) => {
     const tdPrice = document.createElement('td')
     tdDrink.innerText = drink.drink
     tdIngredients.innerText = drink.ingredients
-    tdPrice.innerText = drink.cost
+    tdPrice.innerText = drink.price
     tr.appendChild(tdDrink)
     tr.appendChild(tdIngredients)
     tr.appendChild(tdPrice)
@@ -61,7 +61,8 @@ const renderHomePage = () => {
     mainDiv().appendChild(h1)
 }
 
-const renderDrinkListPage = () => {
+const renderDrinkListPage = async () => {
+    await loadDrinks()
     mainDiv().innerHTML = ''
     const h1 = document.createElement('h1')
     const table = document.createElement('table')
@@ -174,9 +175,8 @@ const homePageLinkEvent = () => {
 }
 
 const drinkListLinkEvent = () => {
-    drinkListLink().addEventListener('click', async (e) => {
+    drinkListLink().addEventListener('click', (e) => {
         e.preventDefault();
-        await loadDrinks();
         renderDrinkListPage();
     })
 }
@@ -190,9 +190,24 @@ const drinkFormLinkEvent = () => {
 
 const submitFormEvent = e => {
     e.preventDefault()
-    //const [drink, ingredients, price] = e.target.children[0]
-    console.log('drink', drinkInput().value)
-}
+    fetch('http://localhost:3000/drinks', {
+        method: "POST",
+        headers: {
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            drink: drinkInput().value,
+            ingredients: ingredientsInput().value,
+            price: priceInput().value
+        })
+    })
+        .then(resp => resp.json())
+        .then(drink => {
+            renderDrinkListPage()
+
+        })
+    }
 
 // When DOM Loads
 

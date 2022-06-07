@@ -1,22 +1,58 @@
 {
-    "drinks": [
-        {
-            "id": 1,
-            "drink": "Moscow Mule",
-            "ingredients": "1 1/2 oz Vodka, 1/6 oz Lime juice, 4 oz Ginger beer",
-            "cost": "$10.23"
-            },
-        {
-            "id": 2,
-            "drink": "Mojito",
-            "ingredients": "1 1/2 oz White rum, 1 oz Fresh lime juice, 2 teaspoons Sugar, 6 leaves of Mint, Soda Water",
-            "cost": "Between $6-$14"
-            },
-        {
-            "id": 3,
-            "drink": "Old Fashioned",
-            "ingredients": "1 1/2 oz Bourbon or Rye whiskey, 1 Sugar cube, 2 dashes Angostura bitters, Few dashes plain water",
-            "cost": "$8.95"
-            }
-    ]
+  "drinks": [
+    {
+      "id": 1,
+      "drink": "Moscow Mule",
+      "ingredients": "1 1/2 oz Vodka, 1/6 oz Lime juice, 4 oz Ginger beer",
+      "price": "$10.23"
+    },
+    {
+      "id": 2,
+      "drink": "Mojito",
+      "ingredients": "1 1/2 oz White rum, 1 oz Fresh lime juice, 2 teaspoons Sugar, 6 leaves of Mint, Soda Water",
+      "price": "Between $6-$14"
+    },
+    {
+      "id": 3,
+      "drink": "Old Fashioned",
+      "ingredients": "1 1/2 oz Bourbon or Rye whiskey, 1 Sugar cube, 2 dashes Angostura bitters, Few dashes plain water",
+      "price": "$8.95"
+    },
+    {
+      "drink": "Marg",
+      "ingredients": " 1 oz Cointreau, 1 oz Lime juice, 2 oz Tequila",
+      "price": "10",
+      "id": 4
+    },
+    {
+      "drink": "Marg",
+      "ingredients": " 1 oz Cointreau, 1 oz Lime juice, 2 oz Tequila",
+      "price": "10",
+      "id": 5
+    },
+    {
+      "drink": "Marg",
+      "ingredients": " 1 oz Cointreau, 1 oz Lime juice, 2 oz Tequila",
+      "price": "10",
+      "id": 6
+    },
+    {
+      "drink": "Marg",
+      "ingredients": " 1 oz Cointreau, 1 oz Lime juice, 2 oz Tequila",
+      "price": "10",
+      "id": 7
+    },
+    {
+      "drink": "Marg",
+      "ingredients": " 1 oz Cointreau, 1 oz Lime juice, 2 oz Tequila",
+      "price": "$10",
+      "id": 8
+    },
+    {
+      "drink": "asda",
+      "ingredients": "asdasd",
+      "price": "asdasd",
+      "id": 9
+    }
+  ]
 }
