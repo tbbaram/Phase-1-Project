@@ -2,7 +2,7 @@
 * Gives you the ability to list different drinks, ingredients, and price of whichever drink you'd like to add.
 
 ### Requirments
-* Access to internet, 
+* Access to internet, GitHub account
 
 ### Installation Instructions
 * Fork and clone on GitHub repo

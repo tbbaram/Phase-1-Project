@@ -204,7 +204,7 @@ const submitFormEvent = e => {
     })
         .then(resp => resp.json())
         .then(drink => {
-            renderDrinkListPage()
+            renderDrinkListPage(drink)
 
         })
     }
