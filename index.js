@@ -1,4 +1,5 @@
 // Globals
+
 const baseUrl = 'http://localhost:3000';
 let drinks = [];
 
@@ -13,26 +14,6 @@ const ingredientsInput = () => document.getElementById('ingredients')
 const priceInput = () => document.getElementById('price')
 
 // Templates
-
-
-// const drinkListTemplate = () => {
-//     return `
-//     <h1>Drink List</h1>
-//             <table class="highlight">
-//                 <thead>
-//                   <tr>
-//                       <th>Drink</th>
-//                       <th>Ingredients</th>
-//                       <th>Price</th>
-//                   </tr>
-//                 </thead>
-
-//                 <tbody>
-//                 ${renderDrinks()}
-//                 </tbody>
-//               </table>
-//     `
-// }
 
 const drinkTemplate = (drink) => {
     const tr = document.createElement('tr')
@@ -142,22 +123,6 @@ const renderDrinkForm = () => {
     mainDiv().appendChild(h1)
     mainDiv().appendChild(form)
 }    
-//             <form>
-//                 <div class="input-field">
-//                     <input id="drink" type="text">
-//                     <label for="drink">Drink</label>
-//                 </div>
-//                 <div class="input-field">
-//                     <input id="ingredients" type="text">
-//                     <label for="ingredients">Ingredients</label>
-//                 </div>
-//                 <div class="input-field">
-//                     <input id="price" type="text">
-//                     <label for="price">Price</label>
-//                   </div>
-//                   <input type="submit" value="Create Drink" class="waves-effect waves-light btn">
-//             </form>
-// }
 
 // Events
 
