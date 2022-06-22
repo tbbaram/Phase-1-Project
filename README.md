@@ -5,7 +5,7 @@
 * Access to internet, GitHub account
 
 ### Installation Instructions
-* Fork and clone on GitHub repo
-* Run json server for db.json(Open your terminal, get into the correct folder, and type "json-server --watch db.json)
-* Open index.html in the browser
+* Fork and clone from GitHub repo onto local computer
+* Run json server for db.json(Open your terminal, get into the correct folder in terminal, and type "json-server --watch db.json)
+* Open index.html from terminal and then go to browser
 
